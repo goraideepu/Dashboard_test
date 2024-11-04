@@ -1,0 +1,86 @@
+@import 'ag-grid-community/styles/ag-grid.css';
+@import 'ag-grid-community/styles/ag-theme-alpine.css';
+
+:root {
+  --primary-color: #2196f3;
+  --success-color: #4caf50;
+  --warning-color: #ff5722;
+  --background-color: #1e1e1e;
+  --card-background: #2d2d2d;
+  --text-color: #ffffff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.dashboard-card {
+  background-color: var(--card-background);
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.success-text {
+  color: var(--success-color);
+}
+
+.warning-text {
+  color: var(--warning-color);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.stats-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 150px;
+}
+
+.stats-value {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stats-label {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+.ag-theme-alpine-dark {
+  --ag-background-color: var(--card-background);
+  --ag-header-background-color: var(--background-color);
+  --ag-odd-row-background-color: rgba(255, 255, 255, 0.05);
+  --ag-header-foreground-color: var(--text-color);
+  --ag-foreground-color: var(--text-color);
+  --ag-row-hover-color: rgba(255, 255, 255, 0.1);
+  --ag-alpine-active-color: var(--primary-color);
+}
+
+.chart-wrapper {
+  width: 100%;
+  margin: 20px 0;
+}
